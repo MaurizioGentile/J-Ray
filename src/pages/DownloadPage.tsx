@@ -2,11 +2,15 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
+// 🚀 VERSIONE ATTUALE (Deve corrispondere ai nomi dei file)
+const VERSION = "v1.0.2";
+
 const translations = {
     it: {
         back: "← TORNA ALLA HOME",
         title: "SCARICA",
         subtitle: "J-RAY PRO",
+        version_label: "Ultima versione stabile:",
         desc: "L'engine nativo in Rust per dominare i tuoi dati. Scegli il tuo sistema operativo e inizia subito.",
         trial_title: "14 GIORNI DI TRIAL GRATUITO",
         trial_desc: "Scarica l'app e avviala. Nessuna carta di credito richiesta, nessuna registrazione. Hai 14 giorni per testare TUTTE le funzionalità PRO (Visual Diff, Radar API, X-Ray) senza limiti.",
@@ -24,6 +28,7 @@ const translations = {
         back: "← BACK TO HOME",
         title: "DOWNLOAD",
         subtitle: "J-RAY PRO",
+        version_label: "Latest stable version:",
         desc: "The native Rust engine to tame your data. Choose your operating system and start immediately.",
         trial_title: "14-DAY FREE TRIAL",
         trial_desc: "Download and run the app. No credit card required, no sign-up. You get 14 days to test ALL PRO features (Visual Diff, API Radar, X-Ray) without limits.",
@@ -76,6 +81,10 @@ export default function DownloadPage() {
                         <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500 mb-4">
                             {t.title} <span className="text-indigo-500">{t.subtitle}</span>
                         </h1>
+                        <div className="flex items-center justify-center gap-2 mb-6">
+                            <span className="text-zinc-500 font-mono text-xs uppercase tracking-widest">{t.version_label}</span>
+                            <span className="px-2 py-0.5 bg-indigo-500/20 border border-indigo-500/40 text-indigo-400 rounded text-xs font-bold font-mono">{VERSION}</span>
+                        </div>
                         <p className="text-zinc-400 font-mono text-sm tracking-wide max-w-xl mx-auto leading-relaxed">
                             {t.desc}
                         </p>
@@ -92,37 +101,38 @@ export default function DownloadPage() {
 
                     {/* DOWNLOAD BUTTONS */}
                     <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                        {/* Windows */}
+
+                        {/* 🪟 Windows ZIP */}
                         <a
-                            href="/J-RAY-PRO-Windows.zip"
-                            download="J-RAY-PRO-Windows.zip"
+                            href={`/J-RAY-PRO-Windows-${VERSION}.zip`}
+                            download={`J-RAY-PRO-Windows-${VERSION}.zip`}
                             className="group relative p-8 bg-zinc-900/50 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-blue-500/10 transition-all text-center flex flex-col items-center gap-4 overflow-hidden"
                         >
                             <div className="text-5xl mb-2 group-hover:scale-110 transition-transform">🪟</div>
                             <div className="font-black tracking-wide text-lg text-white">{t.os.win}</div>
-                            <div className="text-xs font-mono text-zinc-500 uppercase">.ZIP Archive (x64)</div>
+                            <div className="text-[10px] font-mono text-zinc-500 uppercase">.zip Archive • 5.07 MB</div>
                         </a>
 
-                        {/* macOS */}
+                        {/* 🍎 macOS Silicon ZIP */}
                         <a
-                            href="/J-RAY-PRO-macOS.zip"
-                            download="J-RAY-PRO-macOS.zip"
+                            href={`/J-RAY-PRO-macOS-Silicon-${VERSION}.zip`}
+                            download={`J-RAY-PRO-macOS-Silicon-${VERSION}.zip`}
                             className="group relative p-8 bg-zinc-900/50 border border-white/10 rounded-3xl hover:border-white/50 hover:bg-white/10 transition-all text-center flex flex-col items-center gap-4 overflow-hidden"
                         >
                             <div className="text-5xl mb-2 group-hover:scale-110 transition-transform">🍎</div>
                             <div className="font-black tracking-wide text-lg text-white">{t.os.mac}</div>
-                            <div className="text-xs font-mono text-zinc-500 uppercase">.ZIP Archive (Silicon/Intel)</div>
+                            <div className="text-[10px] font-mono text-zinc-500 uppercase">.zip Archive • Silicon</div>
                         </a>
 
-                        {/* Linux */}
+                        {/* 🐧 Linux ZIP */}
                         <a
-                            href="/J-RAY-PRO-Linux.zip"
-                            download="J-RAY-PRO-Linux.zip"
+                            href={`/J-RAY-PRO-Linux-${VERSION}.zip`}
+                            download={`J-RAY-PRO-Linux-${VERSION}.zip`}
                             className="group relative p-8 bg-zinc-900/50 border border-white/10 rounded-3xl hover:border-orange-500/50 hover:bg-orange-500/10 transition-all text-center flex flex-col items-center gap-4 overflow-hidden"
                         >
                             <div className="text-5xl mb-2 group-hover:scale-110 transition-transform">🐧</div>
                             <div className="font-black tracking-wide text-lg text-white">{t.os.lin}</div>
-                            <div className="text-xs font-mono text-zinc-500 uppercase">.ZIP Archive (Ubuntu/Debian)</div>
+                            <div className="text-[10px] font-mono text-zinc-500 uppercase">.zip Archive • 9.97 MB</div>
                         </a>
                     </motion.div>
 
