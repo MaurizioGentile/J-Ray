@@ -198,6 +198,11 @@ export default function TermsPage() {
                         </section>
 
                         <section>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">DATA PROCESSING AND LICENSING:</h2>
+                            <p>J-RAY PRO operates locally. We do not collect, read, or store your JSON data. To prevent piracy, our software generates a unique Hardware ID (Machine ID) which is sent to our payment provider, Lemon Squeezy, exclusively to validate your license key. By entering your license key, you consent to this verification process.</p>
+                        </section>
+
+                        <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 17 - CONTACT INFORMATION</h2>
                             <p className="mb-2">Questions about the Terms of Service should be sent to us at:</p>
                             <a href="mailto:support@jraypro.com" className="text-indigo-400 hover:text-cyan-400 transition-colors underline decoration-indigo-400/30 underline-offset-4">
