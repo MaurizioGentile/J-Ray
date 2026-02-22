@@ -247,8 +247,8 @@ export default function LandingPage() {
         setSubmitStatus('idle');
 
         const { error } = await supabase
-            .from('feedbacks')
-            .insert([{ message: feedbackMsg, email: feedbackEmail || null }]);
+            .from('feedback')
+            .insert([{ message: feedbackMsg, user_email: feedbackEmail || null }]);
 
         setIsSubmitting(false);
 
