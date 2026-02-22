@@ -27,3 +27,15 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+
+# ... (le tue regole precedenti)
+
+# NON ignorare i file compilati che vogliamo distribuire
+!*.exe
+!*.zip
+!*.msi
+!*.dmg
+
+# Se i file sono dentro la cartella target, dobbiamo dire a git di entrare a guardare
+!target/release/J-RAY-PRO*
