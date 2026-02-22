@@ -10,6 +10,7 @@ import TermsPage from './pages/TermsPage';
 import PricingPage from './pages/PricingPage';
 import PrivacyPage from './pages/PrivacyPage';
 import DocsPage from './pages/DocsPage';
+import DownloadPage from './pages/DownloadPage';
 
 export default function App() {
     const [session, setSession] = useState<any>(null);
@@ -49,6 +50,7 @@ export default function App() {
                     <Route path="/pricing" element={<PricingPage />} />
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/docs" element={<DocsPage />} />
+                    <Route path="/download" element={<DownloadPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </BrowserRouter>

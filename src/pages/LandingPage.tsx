@@ -353,7 +353,7 @@ export default function LandingPage() {
                                 {t.hero.desc}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 items-center">
-                                <Link to="/pricing" className="px-10 py-5 bg-indigo-600 rounded-2xl font-black hover:bg-indigo-500 transition-all text-white italic shadow-[0_0_30px_rgba(79,70,229,0.3)]">
+                                <Link to="/download" className="px-10 py-5 bg-indigo-600 rounded-2xl font-black hover:bg-indigo-500 transition-all text-white italic shadow-[0_0_30px_rgba(79,70,229,0.3)]">
                                     DOWNLOAD DESKTOP APP
                                 </Link>
                                 <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-5 border border-white/10 rounded-2xl font-black hover:bg-white/5 transition-all text-zinc-500 italic">

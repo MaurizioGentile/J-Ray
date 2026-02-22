@@ -221,7 +221,7 @@ export default function TermsPage() {
                         {t.footer}
                     </div>
                     <div className="flex items-center gap-6 text-[10px] font-mono tracking-widest uppercase">
-                        <a href="https://www.iubenda.com/privacy-policy/13130280" className="text-zinc-600 hover:text-white transition-colors">
+                        <a href="/privacy" className="text-zinc-600 hover:text-white transition-colors">
                             Privacy_Policy
                         </a>
                     </div>
