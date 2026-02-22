@@ -594,9 +594,7 @@ export default function LandingPage() {
                         <Link to="/docs" className="text-zinc-500 hover:text-white transition-colors">Documentation</Link>
                         <Link to="/pricing" className="text-zinc-500 hover:text-white transition-colors">Pricing</Link>
                         <Link to="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms of Service</Link>
-                        <a href="https://www.iubenda.com/privacy-policy/13130280" className="iubenda-white iubenda-noiframe iubenda-embed text-zinc-500 hover:text-white transition-colors decoration-0" title="Privacy Policy">
-                            Privacy Policy
-                        </a>
+                        <Link to="/privacy" className="text-zinc-500 hover:text-white transition-colors">Privacy Policy</Link>
                     </div>
                 </div>
             </footer>

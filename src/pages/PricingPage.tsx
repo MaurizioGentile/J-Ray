@@ -313,8 +313,7 @@ export default function PricingPage() {
                     <div className="flex items-center gap-6 text-[10px] font-mono tracking-widest uppercase">
                         <Link to="/docs" className="text-zinc-500 hover:text-white transition-colors">Docs</Link>
                         <Link to="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms</Link>
-                        <a href="https://www.iubenda.com/privacy-policy/13130280" className="text-zinc-500 hover:text-white transition-colors">Privacy_Policy</a>
-                    </div>
+                        <Link to="/privacy" className="text-zinc-500 hover:text-white transition-colors">Privacy Policy</Link>                    </div>
                 </div>
             </footer>
         </div>

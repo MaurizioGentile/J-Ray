@@ -8,6 +8,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import EmailConfirmed from './pages/EmailConfirmed';
 import TermsPage from './pages/TermsPage';
 import PricingPage from './pages/PricingPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 export default function App() {
     const [session, setSession] = useState<any>(null);
@@ -45,6 +46,7 @@ export default function App() {
                     <Route path="/auth/confirmed" element={<EmailConfirmed />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </BrowserRouter>
